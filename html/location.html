@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>AARON HYZEN GUITAR</title>
+
+
+
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/location.css">
+  </head>
+  <body>
+    <section class="location-container content-background">
+      <span class="layout-content layout-content-nav-dropdown">
+        <a href="../index.html">
+        LOCATION
+      </a>
+      </span>
+      <ul class="content-font">
+        <li>
+          I will travel to teach lessons at your location but I also offer
+          lessons at the following locations.
+        </li>
+        <li>
+          <p><u><a href="https://www.google.com/maps/place/Cathedral+Pkwy,+New+York,+NY+10026/@40.8005207,-73.9600525,17z/data=!3m1!4b1!4m5!3m4!1s0x89c2f619936d2805:0x1c0cf3f640f44189!8m2!3d40.8005207!4d-73.9578638" target="_blank">Manhattan</a></u></p>
+          I am located next to Central Park, 1 block from either the B/C Trains or
+ 2/3 Express Trains at the 110th street stop in Manhattan. Also many buses come to this area including the
+M10, M4, M3, M2. For more specific directions feel free to get in touch!
+          <a href="https://www.google.com/maps/place/Cathedral+Pkwy,+New+York,+NY+10026/@40.8005207,-73.9600525,17z/data=!3m1!4b1!4m5!3m4!1s0x89c2f619936d2805:0x1c0cf3f640f44189!8m2!3d40.8005207!4d-73.9578638" target="_blank"><div id="map">
+          </div></a>
+        </li>
+        <li>
+          <p><u><a href="https://www.google.com/maps/place/40+Frost+St,+Brooklyn,+NY+11211/@40.717342,-73.9526392,17z/data=!3m1!4b1!4m5!3m4!1s0x89c2595a4bbd1455:0xe698b40d96c4e714!8m2!3d40.717342!4d-73.9504505" target="_blank">Brooklyn</a></u></p>
+          I am also available at my studio in Williamsburg, Brooklyn.
+          However, my schedule there is less flexible.
+          <a href="https://www.google.com/maps/place/40+Frost+St,+Brooklyn,+NY+11211/@40.717342,-73.9526392,17z/data=!3m1!4b1!4m5!3m4!1s0x89c2595a4bbd1455:0xe698b40d96c4e714!8m2!3d40.717342!4d-73.9504505" target="_blank">
+          <div id="bkmap">
+          </div>
+        </a>
+        </li>
+      </ul>
+
+
+    </section>
+    <script type='text/javascript' src='../config.js'></script>
+    <script>
+    function myMap() {
+      var pin = {lat:40.800545, lng:-73.958111}
+        var mapOptions = {
+            center: new google.maps.LatLng(40.800545, -73.958111),
+            zoom: 15,
+            mapTypeId: 'roadmap'
+        };
+
+    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    var marker = new google.maps.Marker({
+            position: pin,
+            map: map
+          });
+
+    brooklynMap();
+    }
+
+    function brooklynMap(){
+      var pin = {lat:40.717536, lng:-73.950475}
+      var mapOptions = {
+          center: new google.maps.LatLng(40.717536, -73.950475),
+          zoom: 17,
+          mapTypeId: 'roadmap'
+      };
+  var bkmap = new google.maps.Map(document.getElementById("bkmap"), mapOptions);
+  var marker = new google.maps.Marker({
+          position: pin,
+          map: bkmap
+        });
+    }
+    var GOOGLE_MAP_KEY = config.MAP_KEY;
+
+    function loadScript() {
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = 'https://maps.googleapis.com/maps/api/js\?' +
+        '&key=' + GOOGLE_MAP_KEY + "&callback=myMap";
+        document.body.appendChild(script);
+      }
+
+      window.onload = loadScript;
+      </script>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+#map, #bkmap {
+  width: 250px;
+  height: 250px;
+  margin: 7px 20%;
+}
+
+.location-container {
+  height: 100%;
+  width: 460px;
+  position: absolute;
+  overflow: hidden;
+  top: 90px;
+  margin-bottom: 40px;
+  left: 30px;
+  display: block;
+  overflow: auto;
+}
