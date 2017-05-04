@@ -4,26 +4,103 @@
 }
 
 #overlay {
-     visibility: hidden;
-     position: absolute;
+     display: none;
+     position: fixed;
      left: 0px;
      top: 0px;
      width:100%;
      height:100%;
      text-align:center;
-     z-index: 1000;
+     z-index: 998;
+     background: rgba(0,0,0,0.6);
 }
 
-#overlay div {
-     width:300px;
-     margin: 100px auto;
-     background-color: #fff;
-     border:1px solid #000;
-     padding:15px;
-     text-align:center;
-     color: black;
+#inner-overlay {
+  display: block;
+  width:610px;
+  height: auto;
+  margin: 100px auto;
+  background-color: #fff;
+  border:1px solid #000;
+  padding:15px;
+  text-align:center;
+  color: #fff;
+  z-index: 10001;
+  background: #000;
 }
 
-.overlay_link {
+#modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+}
+
+
+#modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    width: 60%;
+
+    font-size: 18px;
+    background: #000;
+    width: 650px;
+    height: 500px;
+}
+
+#modal-content form {
+  background: #000;
+}
+
+#close-button {
+  top: 10;
+  margin-left: 600px;
+  background-color: #00ffff;
   position: absolute;
+  font-size: 24px;
+  line-height: 15px;
+  z-index: 99999;
+  cursor: pointer;
+  color: #000;
+  padding: 5px;
+  display: block;
+}
+
+.contact-font {
+  font-size: 17px;
+  margin-bottom: 10px;
+  line-height: 130%;
+}
+
+#overlay-form {
+  float: left;
+  margin-right: 20px;
+  width: 400px;
+}
+
+.content-field {
+  margin-bottom: 20px;
+}
+
+.content-field-header {
+  display: block;
+  margin: 0 0 5px 0;
+  font-size: 11px;
+  font-weight: normal;
+}
+
+.content-input {
+  display: block;
+  padding: 10px;
+  width: 100%;
+  font-size: 12px;
+  line-height: 18px;
+  color: #222;
+  border: 1px solid #ccc;
 }

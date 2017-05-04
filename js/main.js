@@ -1,4 +1,21 @@
+var outerOverlay;
+var closeButton;
 function overlay() {
-	var el = document.getElementById("overlay");
-	el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+	outerOverlay.style.display = "block";
 }
+
+function hideModal(e){
+	outerOverlay.style.display = "none";
+}
+
+window.onclick = function (e){
+  if (e.target === outerOverlay){
+    hideModal(e.target);
+  }
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+    outerOverlay = document.getElementById("modal");
+    closeButton = document.getElementById("close-button");
+    closeButton.addEventListener("click", hideModal, false);
+});
