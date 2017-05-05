@@ -101,9 +101,9 @@ a:hover {
 }
 
 .content-font {
-  font-size: 15px;
+  font-size: 14px;
   letter-spacing: 0.7px;
-  line-height: 140%;
+  line-height: 150%;
 
 }
 
@@ -123,4 +123,9 @@ a:hover {
   font-size: 15px;
   cursor: pointer;
   margin-left: -25px;
+}
+
+.back-arrow:hover {
+  background: #fff;
+  text-decoration: none;
 }
