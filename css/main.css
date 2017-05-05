@@ -102,12 +102,25 @@ a:hover {
 
 .content-font {
   font-size: 15px;
-  letter-spacing: 0.5px;
-  line-height: 130%;
+  letter-spacing: 0.7px;
+  line-height: 140%;
 
 }
 
 .content-font li {
   padding: 5px;
   margin: 5px;
+}
+
+.back-arrow {
+  top: 25px;
+  display: inline-block;
+  background: #404040;
+  width: 20px;
+  height: 20px;
+  color: #000;
+  text-align: center;
+  font-size: 15px;
+  cursor: pointer;
+  margin-left: -25px;
 }

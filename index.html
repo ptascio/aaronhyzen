@@ -6,14 +6,17 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/contact.css">
     <script type="text/javascript" src="./js/main.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.11.1/validate.min.js"></script>
     <title>AARON HYZEN GUITAR</title>
   </head>
   <body>
     <div id="sidebar-container" class="content-background">
       <h1 class="about-name"><span class="inner-name">AARON HYZEN GUITAR</span></h1>
       <ul class="content-list-styles">
-        <li class="content-list-item">WELCOME!
-          <span class="pointer-arrow"> > </span>
+        <li class="content-list-item">
+          <a href="./html/welcome.html">WELCOME!
+            <span class="pointer-arrow"> > </span>
+          </a>
         </li>
         <li>ABOUT LESSONS
           <span class="pointer-arrow"> > </span>
@@ -51,14 +54,23 @@
                 <div class="content-field">
                   <label for="" class="content-field-header">Name</label>
                   <input type="text" class="content-input" name="name" value="">
+                  <ul class="errors">
+                    <li></li>
+                  </ul>
                 </div>
                 <div class="content-field">
                   <label for="" class="content-field-header">Email</label>
                   <input type="email" name="_replyto" value="" class="content-input">
+                  <ul class="errors">
+                    <li></li>
+                  </ul>
                 </div>
                 <div>
                   <label for="" class="content-field-header">Message</label>
                   <textarea name="message" rows="4" class="content-input"></textarea>
+                  <ul class="errors">
+                    <li></li>
+                  </ul>
                 </div>
 
                 <input type="text" name="_gotcha" style="display:none" />
@@ -83,6 +95,25 @@
           contactform.setAttribute('action', 'https://formspree.io/' + config.EMAIL_NAME + '@' + config.EMAIL);
         }
         window.onload = setEmail();
+        </script>
+        <script type="text/javascript">
+          var constraints = {
+            email: {
+              presence: true,
+              email: true
+            }
+          }
+          var form = document.getElementById("contactform");
+          form.addEventListener("submit", function(ev){
+            ev.preventDefault();
+            handleFormSubmit(form);
+          });
+          function handleFormSubmit(form, input) {
+            var errors = validate(form, contraint);
+            debugger
+            return false;
+            showErrors(form, errors);
+          }
         </script>
   </body>
 </html>

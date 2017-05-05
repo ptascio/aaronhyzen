@@ -115,7 +115,10 @@
 }
 
 #form-button:hover {
-  font-size: 20px;
+  font-size: 14px;
+  color: #fff;
+text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
+text-align: center;
   background: #1fffff;
 }
 
@@ -124,4 +127,10 @@
   padding-top: 14px;
   width: 190px;
   margin-left: 12px;
+}
+
+.errors {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #00ffff;
 }
