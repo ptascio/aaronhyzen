@@ -1,5 +1,6 @@
 var outerOverlay;
 var closeButton;
+
 function overlay() {
 	outerOverlay.style.display = "block";
 }
@@ -13,6 +14,20 @@ window.onclick = function (e){
     hideModal(e.target);
   }
 };
+
+function goHome(callback){
+	window.location = "file:///Users/ptascio/Desktop/aaronhyzen/index.html";
+}
+
+function launch(){
+		overlay();
+}
+
+function doitAll(){
+	goHome();
+}
+
+
 
 document.addEventListener("DOMContentLoaded", () => {
     outerOverlay = document.getElementById("modal");
