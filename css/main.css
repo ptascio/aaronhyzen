@@ -32,6 +32,7 @@ a {
 
 a:hover {
   text-decoration: underline;
+  color: #00ffff;
 }
 
 #sidebar-container {
@@ -128,6 +129,7 @@ a:hover {
 .back-arrow:hover {
   background: #fff;
   text-decoration: none;
+  color: #000;
 }
 
 .general-container {
