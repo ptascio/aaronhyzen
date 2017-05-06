@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/contact.css">
     <script type="text/javascript" src="./js/main.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.11.1/validate.min.js"></script>
     <title>AARON HYZEN GUITAR</title>
   </head>
   <body>
@@ -26,16 +25,18 @@
             <span class="pointer-arrow"> > </span>
           </a>
         </li>
-        <li>RATES
-          <span class="pointer-arrow"> > </span>
+        <li><a href="./html/rates.html">RATES
+            <span class="pointer-arrow"> > </span>
+          </a>
         </li>
         <li>
           <a href="./html/location.html">LOCATION
             <span class="pointer-arrow"> > </span>
           </a>
         </li>
-        <li>STUDIO
-          <span class="pointer-arrow"> > </span>
+        <li><a href="./html/studio.html">STUDIO
+            <span class="pointer-arrow"> > </span>
+          </a>
         </li>
         <li>
           <a href="#" onclick="overlay()">CONTACT
@@ -97,25 +98,6 @@
           contactform.setAttribute('action', 'https://formspree.io/' + config.EMAIL_NAME + '@' + config.EMAIL);
         }
         window.onload = setEmail();
-        </script>
-        <script type="text/javascript">
-          var constraints = {
-            email: {
-              presence: true,
-              email: true
-            }
-          }
-          var form = document.getElementById("contactform");
-          form.addEventListener("submit", function(ev){
-            ev.preventDefault();
-            handleFormSubmit(form);
-          });
-          function handleFormSubmit(form, input) {
-            var errors = validate(form, contraint);
-            debugger
-            return false;
-            showErrors(form, errors);
-          }
         </script>
   </body>
 </html>
