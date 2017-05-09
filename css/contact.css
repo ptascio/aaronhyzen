@@ -108,8 +108,10 @@
 
 #form-button {
   margin-top: 20px;
+  font-size: 12px;
   background: #00ffff;
   padding: 7px 12px;
+  text-align: center;
   border: 1px solid #00ffff;
   cursor: pointer;
 }
