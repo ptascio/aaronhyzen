@@ -73,8 +73,10 @@ function checkEmail(email){
 }
 
 function submitResponse(resp){
-  submitButton = document.getElementById("form-button");
-  submitButton.type = "submit";
+  if (resp){
+    submitButton = document.getElementById("form-button");
+    submitButton.type = "submit";
+  }
 }
 
 
@@ -85,6 +87,6 @@ document.addEventListener("DOMContentLoaded", () => {
   contactForm = document.getElementById("contact-form");
   submitButton = document.getElementById("form-button");
   contactForm.oninput = handleInput;
-  
+
   submitButton.addEventListener("click", checkValues);
 });
