@@ -26,8 +26,10 @@ function displayErrors(elid){
 }
 
 function displayEmailErrors(elid){
+  var response = false;
   var el = document.getElementById("email-errors");
   el.innerText = "*Not a valid email";
+  submitResponse(response);
 }
 
 function removeErrors(elid){
@@ -36,21 +38,27 @@ function removeErrors(elid){
 }
 
 function checkValues(){
+  var response = true;
   if (filledName.length < 1){
+    response = false;
     displayErrors("name-errors");
   }else {
     removeErrors("name-errors");
   }
   if (filledEmail.length < 1){
+    response = false;
     displayErrors("email-errors");
   }else if (filledEmail.length > 0){
     checkEmail(filledEmail);
   }
   if (filledMessage.length < 1){
+    response = false;
     displayErrors("message-errors");
   }else {
     removeErrors("message-errors");
   }
+
+  submitResponse(response);
 }
 
 function checkEmail(email){
@@ -64,6 +72,11 @@ function checkEmail(email){
   return re.test(uppercasePassword);
 }
 
+function submitResponse(resp){
+  submitButton = document.getElementById("form-button");
+  submitButton.type = "submit";
+}
+
 
 document.addEventListener("DOMContentLoaded", () => {
   contactName = document.getElementById("contact-name");
@@ -72,5 +85,6 @@ document.addEventListener("DOMContentLoaded", () => {
   contactForm = document.getElementById("contact-form");
   submitButton = document.getElementById("form-button");
   contactForm.oninput = handleInput;
+  
   submitButton.addEventListener("click", checkValues);
 });
