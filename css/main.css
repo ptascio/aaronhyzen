@@ -5,7 +5,9 @@ body {
   background-attachment: fixed;
   background-color: black;
   color: white;
-  font-family: 'Ubuntu', sans-serif;
+  /*font-family: 'Ubuntu', sans-serif;*/
+  font-family: 'Lato', sans-serif;
+  /*font-family: 'Helvetica';*/
   margin: 0;
 }
 
@@ -15,6 +17,7 @@ div {
 
 h1 {
   display: block;
+  font-weight: bold;
   -webkit-margin-before: 0.67em;
   -webkit-margin-after: 0.67em;
   -webkit-margin-start: 0px;

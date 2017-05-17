@@ -117,9 +117,10 @@
 }
 
 #form-button:hover {
-  font-size: 14px;
   text-align: center;
-  background: #1fffff;
+  color: #fff;
+  border: 2px solid #fff;
+  background: #000;
 }
 
 #overlay-prompt {
@@ -145,5 +146,7 @@
 }
 
 .contact-button:hover {
-  font-size: 17px;
+  color: #fff;
+  border: 2px solid #fff;
+  background: #000;
 }
