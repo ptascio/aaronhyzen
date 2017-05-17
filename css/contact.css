@@ -116,7 +116,9 @@
   cursor: pointer;
 }
 
-#form-button:hover {
+#form-button:hover,
+#close-button:hover,
+.contact-button:hover  {
   text-align: center;
   color: #fff;
   border: 2px solid #fff;
@@ -143,10 +145,4 @@
   padding: 14px 24px;
   border: 1px solid #00ffff;
   cursor: pointer;
-}
-
-.contact-button:hover {
-  color: #fff;
-  border: 2px solid #fff;
-  background: #000;
 }
